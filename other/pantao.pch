@@ -1,0 +1,80 @@
+//
+//  pantao.pch
+//  pantao
+//
+//  Created by wkr on 16/5/5.
+//  Copyright © 2016年 pantao. All rights reserved.
+//
+
+
+#ifndef pantao_pch
+#define pantao_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#import "EMSDK.h"
+
+#define UISCREENWIDTH [[UIScreen mainScreen]bounds].size.width
+#define UISCREENHEIGHT [[UIScreen mainScreen]bounds].size.height
+#define aspect ([[UIScreen mainScreen]bounds].size.width/375)
+#define mainColor [UIColor colorWithRed:0.86f green:0.24f blue:0.22f alpha:1.00f]
+#define bgColor [UIColor colorWithRed:0.96f green:0.96f blue:0.96f alpha:1.00f]
+
+#define KColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0                            alpha:1.0]
+
+#define KBackgroundColor KColor(244, 244, 244)//背景颜色
+
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define iOS8 ([[[UIDevice currentDevice]systemVersion]doubleValue]>= 8.0)
+#define iPHone6 ([UIScreen mainScreen].bounds.size.height > 568) ? YES : NO
+
+#define HotCityButtonWith ([UIScreen mainScreen].bounds.size.height > 568) ? 100.f : 80.f
+#define HotCityButtonHeight 36.f
+
+#define kDeviceVersion [[UIDevice currentDevice].systemVersion floatValue]
+#define kNavbarHeight ((kDeviceVersion>=7.0)? 64 :44 )
+#define kIOS7DELTA   ((kDeviceVersion>=7.0)? 20 :0 )
+#define kTabBarHeight 49
+
+#define kAppKey         @"2344125623"
+#define kRedirectURI    @"http://www.sina.com"
+
+#import "DSToast.h"
+
+#import "MBProgressHUD.h"
+
+#import "WeiboSDK.h"
+
+#import "global.h" // 全局的一个单例
+
+#import "netWorking.h"
+#import "AFNetworking.h" // afnetworking
+
+#import "SDWebImage/UIImageView+WebCache.h" // sdwebimage
+
+#import "IQKeyboardManager.h"
+#import "IQKeyboardReturnKeyHandler.h" // 智能键盘
+
+#import "CBZSplashView.h" // Twitter的加载页
+
+#import <pop/POP.h> // pop
+
+#import "Masonry.h" // 自动约束的第三方库
+
+#import "MJRefresh.h" // mj刷新
+
+#import "GzwTableViewLoading.h" // runtime思路写的tableview空白背景loading
+
+//#import "LPRefresh.h" // 仿qq的下拉刷新
+
+#import "YZTRefresh.h"
+
+#import "FXBlurView.h"// 毛玻璃
+
+#import "externs.h"// 常量拓展
+
+#import "NSString+Extension.h"
+
+#import "AppTools.h"
+
+#endif /* pantao_pch */
